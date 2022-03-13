@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap");
+/* colors */
+/* typography */
+@import './base/reset.css';
+html {
+  background: #090b1a;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 97vh;
+}
+
+main {
+  background: #1b1938;
+  width: 1100px;
+  height: 446px;
+  display: flex;
+  border-radius: 8px;
+}
+main .content-right {
+  background: #AB5CDB;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+main .content-right .content-right__img {
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  mix-blend-mode: multiply;
+  opacity: 0.75;
+}
+
+/*# sourceMappingURL=style.css.map */

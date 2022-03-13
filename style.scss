@@ -1,0 +1,32 @@
+@import './base/variable.scss';
+@import './base/reset.css';
+
+html {
+  background: $very-dark-blue;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 97vh;
+}
+
+main {
+  background: $dark-desaturated-blue-card-background;
+  width: 1100px;
+  height: 446px;
+  display: flex;
+  border-radius: 8px;
+  .content-right {
+    background: #AB5CDB;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    .content-right__img {
+      border-top-right-radius: 8px;
+      border-bottom-right-radius: 8px;
+      mix-blend-mode: multiply;
+      opacity: 0.75;
+    }
+  }
+}
