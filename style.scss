@@ -1,6 +1,6 @@
-@import './base/variable.scss';
-@import './base/reset.css';
-@import './base/mediaqueries.scss';
+@import "./base/variable.scss";
+@import "./base/reset.css";
+@import "./base/mediaqueries.scss";
 
 html {
   background: $very-dark-blue;
@@ -13,6 +13,10 @@ body {
   min-height: 97vh;
 
   @include lt-sm {
+    min-height: 100vh;
+  }
+
+  @include lt-md {
     min-height: 100vh;
   }
 }
@@ -31,12 +35,23 @@ main {
     height: 780px;
   }
 
+  @include lt-md {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 327px;
+    height: 780px;
+  }
+
   .content-right {
     background: $soft-violet-accent;
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
 
     @include lt-sm {
+      border-radius: 8px;
+    }
+
+    @include lt-md {
       border-radius: 8px;
     }
 
@@ -51,14 +66,25 @@ main {
         height: 240px;
         border-radius: 8px;
       }
+
+      @include lt-md {
+        width: 327px;
+        height: 240px;
+        border-radius: 8px;
+      }
     }
   }
 
   .content-left {
     margin-top: 71px;
     margin-left: 72px;
-    
+
     @include lt-sm {
+      margin-top: 40px;
+      margin-left: 31px;
+    }
+
+    @include lt-md {
       margin-top: 40px;
       margin-left: 31px;
     }
@@ -80,8 +106,17 @@ main {
         line-height: 32px;
         text-align: center;
         margin-right: 31.5px;
-
       }
+
+      @include lt-md {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 32px;
+        text-align: center;
+        margin-right: 31.5px;
+      }
+
       .accents {
         color: $soft-violet-accent;
       }
@@ -100,7 +135,15 @@ main {
       @include lt-sm {
         width: 264px;
         text-align: center;
-        color: #FFFFFF;
+        color: #ffffff;
+        mix-blend-mode: normal;
+        opacity: 0.75;
+      }
+
+      @include lt-md {
+        width: 264px;
+        text-align: center;
+        color: #ffffff;
         mix-blend-mode: normal;
         opacity: 0.75;
       }
@@ -114,6 +157,19 @@ main {
       justify-content: space-between;
 
       @include lt-sm {
+        width: 264px;
+        display: flex;
+        flex-direction: column;
+        margin-top: 40px;
+        .statistic-box {
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          margin-bottom: 24px;
+        }
+      }
+
+      @include lt-md {
         width: 264px;
         display: flex;
         flex-direction: column;
