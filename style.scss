@@ -1,5 +1,6 @@
 @import './base/variable.scss';
 @import './base/reset.css';
+@import './base/mediaqueries.scss';
 
 html {
   background: $very-dark-blue;
@@ -10,6 +11,10 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 97vh;
+
+  @include lt-sm {
+    min-height: 100vh;
+  }
 }
 
 main {
@@ -18,15 +23,125 @@ main {
   height: 446px;
   display: flex;
   border-radius: 8px;
+
+  @include lt-sm {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 327px;
+    height: 780px;
+  }
+
   .content-right {
-    background: #AB5CDB;
+    background: $soft-violet-accent;
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
+
+    @include lt-sm {
+      border-radius: 8px;
+    }
+
     .content-right__img {
       border-top-right-radius: 8px;
       border-bottom-right-radius: 8px;
       mix-blend-mode: multiply;
       opacity: 0.75;
+
+      @include lt-sm {
+        width: 327px;
+        height: 240px;
+        border-radius: 8px;
+      }
+    }
+  }
+
+  .content-left {
+    margin-top: 71px;
+    margin-left: 72px;
+    
+    @include lt-sm {
+      margin-left: 31px;
+    }
+
+    .header {
+      margin-right: 95px;
+      font-family: $font-family-inter;
+      font-size: 36px;
+      color: $white;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 36px;
+      line-height: 44px;
+
+      @include lt-sm {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 32px;
+        text-align: center;
+        margin-right: 31.5px;
+
+      }
+      .accents {
+        color: $soft-violet-accent;
+      }
+    }
+
+    .content {
+      margin-top: 25px;
+      font-family: $font-family-inter;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 25px;
+      color: $white;
+      width: 374px;
+
+      @include lt-sm {
+        width: 264px;
+        text-align: center;
+        color: #FFFFFF;
+        mix-blend-mode: normal;
+        opacity: 0.75;
+      }
+    }
+
+    .statistic-boxs {
+      display: flex;
+      color: $white;
+      margin-top: 72px;
+      width: 360px;
+      justify-content: space-between;
+
+      @include lt-sm {
+        width: 264px;
+        display: flex;
+        flex-direction: column;
+
+        .statistic-box {
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          margin-bottom: 24px;
+        }
+      }
+
+      .statistic-box__number {
+        font-family: $font-family-inter;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 29px;
+      }
+
+      .statistic-box__title {
+        font-family: $font-family-lexend;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 25px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+      }
     }
   }
 }
