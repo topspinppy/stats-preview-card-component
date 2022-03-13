@@ -59,6 +59,7 @@ main {
     margin-left: 72px;
     
     @include lt-sm {
+      margin-top: 40px;
       margin-left: 31px;
     }
 
@@ -116,7 +117,7 @@ main {
         width: 264px;
         display: flex;
         flex-direction: column;
-
+        margin-top: 40px;
         .statistic-box {
           display: flex;
           align-items: center;
